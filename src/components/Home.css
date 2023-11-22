@@ -1,0 +1,254 @@
+.home-container {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background-image: url('/public/loglib.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.background-image::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* background-image: url('/public/libb.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px); */
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.about-us-container,
+.faq-container {
+  width: 100%; /* Take full width on smaller screens */
+  max-width: 100%; /* Max width is 100% */
+  margin: 2rem 0;
+}
+
+/* FAQ Styles */
+.container {
+  margin: 0;
+  padding: 2rem; /* Adjust padding for better spacing */
+  width: 100%; /* Take full width on smaller screens */
+  max-width: 100%; /* Max width is 100% */
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #ffffff;
+}
+
+.accordion .accordion-item button[aria-expanded='true'] {
+  border-bottom: 1px solid #03b5d2;
+}
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: #03b5d2;
+}
+
+.accordion button:hover::after,
+.accordion button:focus::after {
+  cursor: pointer;
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.accordion button[aria-expanded='true'] {
+  color: #03b5d2;
+}
+
+.accordion button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+
+.accordion button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content {
+  color: black;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+
+/* About Us Styles */
+.library-box {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+}
+
+h2 {
+  color: #0e0202;
+}
+
+h3 {
+  color: #eadfdf;
+}
+
+.library-info {
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* Media query for responsiveness */
+@media (min-width: 768px) {
+  .library-box {
+    width: 70%;
+  }
+}
+@media (min-width: 768px) {
+  .content-container {
+    align-items: flex-start; /* Revert alignment for larger screens */
+  }
+}
+.user-reviews-container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(116, 66, 66, 0.9); 
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.user-review {
+  margin-bottom: 10px;
+}
+
+/* New Review Form Styles */
+.new-review-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-review-form label {
+  margin-bottom: 10px;
+}
+
+.new-review-form textarea {
+  resize: vertical;
+  max-width: 100%;
+}
+
+.new-review-form input,
+.new-review-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+.new-review-form button {
+  background-color: #03b5d2;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media only screen and (min-width: 768px) {
+  .faq-container,
+  .about-container,
+  .user-reviews-container {
+    width: 70%;
+  }
+
+  .new-review-form {
+    max-width: 500px;
+  }
+}
+
+/* Add this CSS rule to ensure the banner image covers the entire width */
+.banner-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-image img {
+  width: 100%;
+  height:auto;
+}
+
