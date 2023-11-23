@@ -288,3 +288,10 @@ Economy: intricate web of production, distribution, consumption; influenced by p
 export default Category;
 
 
+// echo "# crud-deployment-frontend-mernfinal" >> README.md
+//   git init
+//   git add README.md
+//   git commit -m "first commit"
+//   git branch -M main
+//   git remote add origin https://github.com/Tanmayee12345/crud-deployment-frontend-mernfinal.git
+//   git push -u origin main

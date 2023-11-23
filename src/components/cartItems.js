@@ -28,12 +28,11 @@ function CartItem(props) {
   }, []); // Empty dependency array ensures this runs only once, similar to componentDidMount
 
   const handleClick = () => {
-    Axios.delete('https://crud-deployment1-backend-mern.onrender.com/Route/delete-cart/${props.val._id}')
+    Axios.delete(`https://crud-deployment1-backend-mern.onrender.com/Route/delete-cart/${props.val._id}`)
       .then((res) => {
         if (res.status === 200) {
           alert('Item deleted from Cart');
-          // You might want to update the cart state in the parent component instead of reloading the entire page
-          // UpdateCartStateHere();
+          
         } else {
           Promise.reject();
         }
